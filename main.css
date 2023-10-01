@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;800&display=swap');
+:root{
+    --background-box : hsl(217, 19%, 38%);
+    --button-color : hsl(150, 100%, 66%);
+    --background-body : hsl(217, 19%, 24%);
+    --shadow-color:hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 28px;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--shadow-color);
+    
+}
+body .con{
+    padding: 0 15px;
+}
+body .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-body);
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    min-height: 240px;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+@media (max-width: 430px) {
+    body .container{
+        max-width: 250px;
+    }
+}
+body .container h6{
+    color: var(--button-color);
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: small;
+    letter-spacing: 5px;
+}
+body .container h6 span{
+    opacity: 0;
+    transition: opacity 0.3s ;
+}
+body .container p{
+    font-weight: 800;
+    color: white;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ;
+}
+@media (max-width:430px) {
+    body .container p{
+        font-size: 24px;
+    }
+}
+body .container button{
+    all: unset;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+body .container button:hover{
+    box-shadow: 0px 0px 10px var(--button-color);
+}
+body .container button img{
+    width: 20px;
+}
